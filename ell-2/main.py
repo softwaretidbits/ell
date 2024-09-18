@@ -30,6 +30,7 @@ class TidbitReview(BaseModel):
 
 # Tidbit for ell container model
 class EllTidbit(BaseModel):
+    ell.init(store='./logdir', autocommit=True)
 
     def hearing(self, name):
         print(f"=== What are you hearing {name}?")
@@ -54,8 +55,8 @@ class EllTidbit(BaseModel):
         description = self.inspect_image(image)
         print(description)
 
-    def intro_to_ell(self):
-        print("*** Part 1 Examples")
+    def generate_information(self):
+        print("*** Generate foundations.")
         person = Person(name="Mr. Tidbit", age=43, favorite_image="images/cat-image.jpg")
         self.hearing(person.name)
         self.review()
@@ -97,20 +98,21 @@ class EllTidbit(BaseModel):
 
 if __name__ == '__main__':
     print('')
-    print('Welcome to a SoftwareTidbits session.  Using ell for prompt engineering w/ Python')
+    print(
+        'Welcome to a SoftwareTidbits session (ell-2) about using ell-studio as part of your prompt engineering w/ Python and ell')
+    print(
+        'If you missed the first session take a look at the project (ell-1) and follow along from https://medium.com/software-tidbits/prompt-engineering-using-ell-language-model-programming-lib-3658287c96e5')
     print('')
-    print('What: ')
-    print('An introduction to treating prompts as programs in Python.')
-    print('')
-    print('How: ')
-    print('LMPs are language model programs, representing functions.')
-    print('')
-    print('Get started using ell.  Kicking off some examples now.')
+    print(
+        "Execute the four use cases derived from the 'ell introduction' session to build up some persisted LMP information.")
+    print('1. Run the ell-studio tool using your command line')
+    print('Example: ell-studio --storage ./logdir')
+    print('2. Open the link upon startup. By default this is: http://127.0.0.1:8080.')
+    print('3. Explore!')
     print('---')
 
     # Construct our tidbit
     ell_tidbit = EllTidbit()
 
-    # Run part 1
-    ell_tidbit.intro_to_ell()
-
+    # Run examples to generate information to use for visualization w/ ell-studio
+    ell_tidbit.generate_information()
