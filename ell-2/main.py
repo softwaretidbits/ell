@@ -39,7 +39,7 @@ class EllTidbit(BaseModel):
 
     def review(self):
         print("=== Providing a tidbit review.")
-        review_message = self.create_tidbit_review("An Introduction to ell")
+        review_message = self.create_tidbit_review("Visualize with ell-studio")
         review = review_message.parsed
         print(f"Tidbit: {review.title}, Rating: {review.rating}/10")
         print(f"Summary: {review.summary}")
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     print(
         'Welcome to a SoftwareTidbits session (ell-2) about using ell-studio as part of your prompt engineering w/ Python and ell')
     print(
-        'If you missed the first session take a look at the project (ell-1) and follow along from https://medium.com/software-tidbits/prompt-engineering-using-ell-language-model-programming-lib-3658287c96e5')
+        'If you missed the first session, take a look at the project (ell-1) - https://medium.com/software-tidbits/prompt-engineering-using-ell-language-model-programming-lib-3658287c96e5')
     print('')
     print(
         "Execute the four use cases derived from the 'ell introduction' session to build up some persisted LMP information.")
